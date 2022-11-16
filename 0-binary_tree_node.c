@@ -7,13 +7,15 @@
 **/
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 {
-	node *tmp = NULL;
+	binary_tree_t *tmp = NULL;
+
+	tmp = (node *)malloc(sizeof(node));
 
 	if (!(*binary_tree))
 	{
-		tmp = (node *)malloc(sizeof(node));
+		tmp->n = value;
+		tmp->parent = parent;
 		tmp->left = tmp->right = NULL;
-		tmp->data = value;
 		*binary_tree = tmp;
 	}
 
