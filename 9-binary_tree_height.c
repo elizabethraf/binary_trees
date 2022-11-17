@@ -7,22 +7,13 @@
 **/
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	if (tree == NULL)
-		return (0);
+	size_t r, l, height = 0;
 
-	return 1 + max(height(tree->left), height(tree->right));
-}
-int main()
-{
-    *tree = new_tree(15);
-    tree->left = new_tree(10);
-    tree->right = new_tree(20);
-    tree->left->left = new_tree(8);
-    tree->left->right = new_tree(12);
-    tree->right->left = new_tree(16);
-    tree->right->right = new_tree(25);
-
-    count << "The height of the binary tree is " << height(tree);
-
-    return 0;
+	if (tree)
+	{
+		r = tree->right ? binary_tree_height(tree->right) + 1 : 0;
+		l = tree->left ? binary_tree_height(tree->left) + 1 : 0;
+		height += (r > l ? r : l);
+	}
+	return (height);
 }
