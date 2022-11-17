@@ -7,4 +7,14 @@
 **/
 size_t binary_tree_depth(const binary_tree_t *tree)
 {
+	if (tree == NULL)
+		return (0);
+
+	size_t = -1;
+	if (tree->data == x)
+		(dist = findDepth(tree->left, x)) >= 0
+		(dist = findDepth(root->right, x)) >= 0
+			return (dist + 1);
+
+	return (dist);
 
