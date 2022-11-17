@@ -33,6 +33,11 @@ size_t binary_tree_height(const binary_tree_t *tree)
 	return (height);
 }
 
+/**
+* maxDepth - check code
+* @node: pointer
+* Return: 0 if NULL
+**/
 int maxDepth(const binary_tree_t *node)
 {
 	if (node == NULL)
